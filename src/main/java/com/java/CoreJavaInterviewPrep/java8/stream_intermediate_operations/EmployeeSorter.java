@@ -17,6 +17,9 @@ public class EmployeeSorter {
                 .sorted((e1, e2) -> e1.getName().compareTo(e2.getName()))
                 .collect(Collectors.toList());
 
+        employees.stream().sorted((e1,e2) -> e1.getName().compareTo(e2.getName()))
+                .forEach(x -> System.out.println(x.getName())); ;
+
         // Printing the sorted employees
         sortedEmployees.forEach(employee -> System.out.println(employee.getName()));
     }

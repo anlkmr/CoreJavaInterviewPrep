@@ -37,5 +37,7 @@ public class GettingaMapsKeysUsingStreams {
 
         isbnCodes.forEach(System.out::println);
 
+        books.entrySet().stream().filter(x -> x.getValue().startsWith("Effective Java")).map(Map.Entry::getKey).collect(Collectors.toList()).forEach(System.out::println);
+
     }
 }
